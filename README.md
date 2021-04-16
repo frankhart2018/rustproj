@@ -28,7 +28,7 @@ user@programmer~:$ rustproj --proj <proj-name> --both
 user@programmer~:$ rustproj --proj <proj-name> [--lib | --both]
 ```
 
-- Version
+- Check version
 
 ```bash
 user@programmer~:$ rustproj --version
