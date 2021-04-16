@@ -37,7 +37,7 @@ setup(
     url="https://github.com/frankhart2018/rustproj",
     author="Siddhartha Dhar Choudhury",
     author_email="sdharchou@gmail.com",
-    license="GNU General Public License v3",
+    license="MIT",
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python :: 3",
