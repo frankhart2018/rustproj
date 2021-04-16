@@ -1,4 +1,5 @@
 import os
+import shutil
 
 
 class ProjGenerator:
@@ -16,10 +17,12 @@ class ProjGenerator:
         self.__create_contents()
 
     def __create_dir(self, dir_path=None):
-        if(dir_path == None):
-            os.makedirs(self.__dir_name, exist_ok=True)
-        else:
-            os.makedirs(dir_path, exist_ok=True)
+        dir_path = self.__dir_name if dir_path == None else dir_path
+
+        if os.path.exists(dir_path):
+            shutil.rmtree(dir_path)
+        
+        os.mkdir(dir_path)
 
     def __create_root_dir(self):
         self.__create_dir()
