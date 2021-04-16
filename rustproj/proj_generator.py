@@ -5,6 +5,7 @@ class ProjGenerator:
     def __init__(self, dir_name, is_lib, is_both):
         self.__dir_name = dir_name
         self.__is_lib = is_lib
+        self.__is_both = is_both
 
         self.__src_dir_path = os.path.join(self.__dir_name, "src")
 
@@ -28,8 +29,7 @@ class ProjGenerator:
 
     def __create_contents(self):
         cargo_toml_file_path = os.path.join(self.__dir_name, "Cargo.toml")
-        cargo_toml_contents = f"""
-[package]
+        cargo_toml_contents = f"""[package]
 name = "{self.__dir_name}"
 version = "0.1.0"
 
